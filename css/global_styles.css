@@ -1,148 +1,354 @@
 body, html {
-  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: "Tempus Sans ITC", "Monotype Corsiva", cursive;
   font-style: normal;
   font-size: 1.5vw;
 }
 body {
-  background-image: url("../images/state_seal.png");
-  background-color:rgb(19, 2, 71);
-  background-size:20vw 20vw;
-  background-repeat: space repeat;
+  margin: 0;
 }
-.grid-wrapper{
-  display: grid;
-  gap: 0vw;
-  grid-template-columns: repeat(100, 1fr);
-  grid-template-rows: repeat(100, 1fr);
+.side-page {
+  background-image: url("../images/taniti_background.png");
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-attachment:fixed;
+  background-position:center;
+  background-color: rgb(16, 53, 22);
 }
-.main-page-border {
-  grid-column: 20 / 80;
-  grid-row: 8 / 92;
-  background-color: rgb(158, 149, 111);
-  padding: 2vw;
-  border-style: groove;
-  border-color:rgb(53, 34, 1);
-  border-width: 0.4vw;
+h1 {
+ font-size: 350%;
+ text-align: center;
+ margin: 1.2vw;
 }
-header {
+.olae {
+  margin: 0;
+  padding: 4vw;
+  color: rgb(240, 247, 117);
+}
+.book-button{
+  position:absolute;
+  top:4.8vw;
+  right:16vw;
+  width:12vw;
+  height:4.5vw;
+  background-color: rgba(247, 245, 245, 0.245);
+  border-width: 0.5vw;
+  border-style:solid;
+  border-color: rgb(240, 247, 117);
+  color: rgb(240, 247, 117);
+  border-radius: 35%;
+  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  font-size: 150%;
+}
+.book-button:hover {
+  border-color: rgb(245, 251, 137);
+  color: rgb(242, 247, 147);
+  background-color: rgba(253, 251, 251, 0.45);
+  box-shadow: 0vw 0vw 2vw rgba(255, 255, 255, 0.4);
+}
+.book-button > p{
+  margin: 0;
+  padding:0;
+  width: 90%;
   text-align: center;
-  font-size: 115%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration:none;
+  pointer-events: none;
 }
-li {
+.parallax-background {
+  width: 100%;
+  height: 33vw;
   position:relative;
-  left: -1vw;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-table, th, td {
-  border: 0.2vw solid;
+.parallax-short {
+  height: 16vw;
 }
-.table-even{
-  background-color:rgb(187, 148, 89)
+.parallax-1{
+  background-image: url("../images/taniti_beach.png");
 }
-.table-odd{
-  background-color:rgb(146, 96, 20)
+.parallax-2{
+  background-image: url("../images/taniti_volcano.png");
 }
-#navbar {
+.parallax-3{
+  background-image: url("../images/taniti_nights.png");
+}
+.parallax-4{
+  background-image: url("../images/taniti_bus.png");
+}
+.parallax-5{
+  background-image: url("../images/taniti_hotel.png");
+}
+.parallax-6{
+  background-image: url("../images/taniti_food.png");
+}
+.nav-banner {
+  width:100%;
+  height: 100%;
+  background-image: url("../images/taniti_vines.png");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: contain;
+  z-index: 1;
+  position:absolute;
+  bottom: 0;
+  pointer-events: none;
+}
+.welcome {
+  background: rgb(195,120,13);
+  background: radial-gradient(circle, rgba(195,120,13,0.85) 0%, rgba(154,130,29,0.85) 35%, rgba(247, 255, 14, 0.85) 100%);
+  border-radius: 100%;
+  border-width: 0;
+  font-size: 200%;
+  position: absolute;
+  right: 8vw;
+  top: 3vw;
+  width: 14vw;
+  height: 14vw;
+}
+.welcome > p {
+  position: absolute;
+  width:100%;
+  top: 0%;
+  text-align: center;
+}
+
+.transparent-textbox {
+  width: 35vw;
+  height: 16vw;
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 255, 0.539);
+  border-radius: 10%;
+  padding: 1vw;
+  text-decoration: inherit;
+  color:inherit;
+
+}
+.transparent-textbox > h2 {
+  text-align: center;
+  pointer-events: none;
+}
+.transparent-textbox > p {
+  font-size: 65%;
+  pointer-events: none;
+}
+.transparent-textbox > u {
+  font-size: 58%;
+  pointer-events: none;
+}
+.left {
+  left: 6vw;
+}
+.right {
+  right: 6vw;
+}
+.white, .white > * {
+  color: aliceblue;
+}
+.sightseeing {
+  background: rgb(4,47,6);
+  background: linear-gradient(90deg, rgb(4,47,6) 0%, rgb(30,84,34) 35%, rgb(49,112,55) 100%);
+  border: 0.3vw;
+  border-style:solid;
+  border-color: rgb(12, 38, 14);
+  box-shadow: 0.5vw 0.25vw 0.25vw rgba(64, 67, 64, 0.60);
+}
+.sightseeing:hover {
+  background: rgb(7, 86, 11);
+  background: linear-gradient(90deg, rgb(10, 73, 13) 0%, rgb(53, 124, 58) 35%, rgb(68, 140, 75) 100%);
+}
+.entertainment {
+  background: rgb(42,14,98);
+  background: linear-gradient(90deg, rgb(42,14,98) 0%, rgb(65,9,51) 35%, rgb(130,13,13) 100%);
+  border: 0.3vw;
+  border-style:solid;
+  border-color: rgb(27, 14, 55);
+  box-shadow: -0.5vw 0.25vw 0.25vw rgba(64, 67, 64, 0.60);
+}
+.entertainment:hover {
+  background: rgb(76, 26, 174);
+  background: linear-gradient(90deg, rgb(55, 24, 116) 0%, rgb(90, 17, 72) 35%, rgb(166, 26, 26) 100%);
+}
+.transportation {
+  background: rgb(58,169,221);
+  background: linear-gradient(90deg, rgb(58,169,221) 0%, rgb(221,242,242) 35%, rgb(58,169,221) 100%);
+  border: 0.3vw;
+  border-style:solid;
+  border-color: rgb(43, 104, 132);
+  box-shadow: 0.5vw 0.25vw 0.25vw rgba(64, 67, 64, 0.60);
+}
+.transportation:hover {
+  background: rgb(81, 192, 243);
+  background: linear-gradient(90deg, rgb(86, 195, 245) 0%, rgb(240, 251, 251) 35%, rgb(71, 165, 209) 100%);
+}
+.lodging {
+  background: rgb(11,6,61);
+  background: linear-gradient(90deg, rgb(125,74,11) 0%, rgb(12,24,98) 35%, rgb(11,6,61) 100%);
+  border: 0.3vw;
+  border-style:solid;
+  border-color: rgb(8, 6, 32);
+  box-shadow: -0.5vw 0.25vw 0.25vw rgba(64, 67, 64, 0.60);
+}
+.lodging:hover {
+  background: rgb(30, 18, 153);
+  background: linear-gradient(90deg, rgb(165, 102, 26) 0%, rgb(28, 44, 143) 35%, rgb(29, 20, 118) 100%);
+}
+.food {
+  background: rgb(236,213,27);
+  background: linear-gradient(90deg, rgba(236,213,27) 0%, rgba(40,168,20) 35%, rgba(209,121,63) 100%);
+  border: 0.3vw;
+  border-style:solid;
+  border-color: rgb(128, 116, 26);
+  box-shadow: 0.5vw 0.25vw 0.25vw rgba(64, 67, 64, 0.60);
+}
+.food:hover {
+  background: rgb(255, 232, 60);
+  background: linear-gradient(90deg, rgb(251, 228, 50) 0%, rgb(59, 202, 37) 35%, rgb(240, 147, 84) 100%);
+}
+.navbar {
   display:flex;
   flex-flow: row wrap;
-  padding:0.8vw;
+  width:100%;
 }
-#navbar > a {
+.border-bar {
+  width: 100%;
+  height:1.5vw;
+  background-color: rgb(16, 119, 40);
+  border-width: 0.2vw 0 0.2vw 0;
+  border-style:solid;
+  border-radius: 0;
+  border-color: rgb(2, 43, 13);
+}
+.abs {
+  position:absolute;
+}
+.rel {
+  position: relative;
+}
+.top {
+  top: 0;
+}
+.bottom {
+  bottom: 0;
+}
+.float {
+  position:float;
+}
+.navbar > a {
   flex-grow: 1;
-  color:aliceblue;
-  background-color: rgb(37, 91, 143);
+  background-color: rgb(16, 119, 40);
   border-width: 0.2vw;
   border-style:solid;
   border-radius: 0;
-  border-color: rgb(4, 26, 47);
+  border-color: rgb(2, 43, 13);
   text-align: center;
 }
-#navbar > a:hover{
-  color:rgb(207, 205, 40);
-  background-color: rgb(74, 124, 210);
+.navbar > a > p {
+  position: relative;
+  z-index: 100;
+  margin: 0;
+  padding: 0;
 }
-.box-in-box {
-  background-color: rgb(151, 119, 69);
-  padding: 0.8vw;
-  margin: 1vw;
-  border-style: solid;
-  border-color:rgb(63, 47, 20);
+.navbar > a:hover {
+  color:rgb(240, 244, 198);
+  background-color: rgb(18, 168, 53);
+  border-color: rgb(7, 95, 30);
 }
-.image-box {
-  background-color: rgb(151, 119, 69);
-  padding: 0.8vw;
-  border-style: solid;
-  border-color:rgb(63, 47, 20);
-  display: block;
-  width: 50%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
+.attraction-flexbox {
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  width:100%;
 }
-.image-box > img {
-  display: block;
-  width: 100%;
-  height: auto;
+.attraction {
+ width: 64%;
+ height: 10vw;
+ border-width: 0.2vw;
+ border-color: rgb(0, 0, 0);
+ border-style:groove;
+ display: flex;
+ flex-wrap: nowrap;
 }
-#sidebar {
-  position:absolute;
-  left: 79%;
-  top: 30%;
-  height: fit-content;
-  width:10%;
-  background-color: rgb(243, 255, 13);
-  padding: 0.7vw;
-  border-style:ridge;
-  border-color:rgb(92, 23, 5);
-  border-width: 0.2vw;
-}
-#sidebar > img {
-  display: block;
-  width: 95%;
-  height: auto;
-  margin-left: auto;
-  margin-right: auto;
-  border-style: solid;
-  border-color:rgb(63, 47, 20);
-  border-width: 0.2vw;
-}
-.smaller-text {
-  font-size: 75%;
-}
-#references {
-  font-size: 35%;
-}
-.reduced-margin {
-  margin: -0.10vw;
-}
-.form-label {
-  font-size:75%;
-}
-.form-field {
-  width: 18vw;
-  height: 1.8vw;
-}
-.form-input-box{
-  display:block;
-}
-#form-image{
-  float:right;
-  height: 12vw;
+.attraction > img {
+  height: 100%;
   width: auto;
-}
-.attraction-header {
-  font-size: 100%;
-  margin-bottom: -0.8vw;
 }
 .attraction-text {
-  font-size: 85%;
-  margin-bottom: -0.8vw;
+  display:flexbox;
+  padding: 0.3vw;
+  flex-flow: column;
+  flex-wrap: nowrap;
 }
-#attraction-image-box {
-  display:flex;
-  flex-flow: row wrap;
+.attraction-text > h3 {
+  margin: 0.1vw;
 }
-.attraction-image {
-  height: 11vw;
-  width: auto;
-  flex-grow: 1;
+.attraction-text > p {
+  font-size: 68%;
+  margin: 0.05vw;
+}
+.attraction-text > u {
+  font-size: 60%;
+  margin: 0.05vw;
+}
+.colors-green > .odd {
+  background-color: rgb(4,47,6);
+}
+.colors-green > .even {
+  background-color: rgb(49,112,55);
+}
+.colors-purple > .odd {
+  background-color:rgb(66, 37, 125);
+}
+.colors-purple > .even {
+  background-color: rgb(110, 37, 37);
+}
+.colors-lightblue > .odd {
+  background-color: rgb(58,169,221);
+}
+.colors-lightblue > .even {
+  background-color: rgb(221,242,242);
+}
+.colors-darkblue > .odd {
+  background-color: rgb(12,24,98);
+}
+.colors-darkblue > .even {
+  background-color: rgb(125,74,11);
+}
+.colors-yellowgreen > .odd {
+  background-color: rgb(220, 208, 111);
+}
+.colors-yellowgreen > .even {
+  background-color: rgb(100, 189, 86) ;
+}
+.odd {
+  flex-flow:row;
+}
+.odd {
+  flex-flow:row-reverse;
+}
+.odd > img {
+  margin-right: auto;
+}
+.even > img {
+  margin-left: auto;
+}
+.even > u {
+  left: 0%;
+}
+.references {
+  position:fixed;
+  bottom:0.35vw;
+  left: 0.35vw;
+  color:aliceblue;
+  font-size: 45%;
+  background-color: rgb(43, 43, 43);
+  z-index: 999;
 }
